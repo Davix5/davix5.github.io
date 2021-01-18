@@ -5,9 +5,7 @@ listar();
 
 function listar() {
     var table = $('#table');
-
-    table.text("Teste")
-
+    
     var dados = {
         listarProdutos: 1
     }

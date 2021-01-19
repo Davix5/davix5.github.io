@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Produtos</title>
+        <title>Formulários Adicionais</title>
 
         <!-- Custom fonts for this template-->
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
@@ -419,7 +419,7 @@
                                 <div class="d-sm-flex align-items-center
                                     justify-content-between">
                                     <h5 class="m-0 font-weight-bold
-                                        text-danger">Produto</h5>
+                                        text-danger">Dados Adicionais</h5>
                                     <a href="#" class="d-none d-sm-inline-block
                                         btn btn-sm btn-danger shadow-sm"
                                         data-toggle="modal"
@@ -437,40 +437,28 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Imagem</th>
-                                                <th>Nome</th>
+                                                <th>Título</th>
                                                 <th>Preço</th>
-                                                <th>Categoria</th>
-                                                <th>Descrição</th>
-                                                <th>Status</th>
                                                 <th>Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>
-                                                    <center>
-                                                        <img src="img/teste.png"
-                                                            width="50px">
-                                                    </center>
-                                                </td>
                                                 <td>Teste</td>
                                                 <td>R$ 00,00</td>
-                                                <td>Teste</td>
-                                                <td>Teste</td>
-                                                <td>Disponível</td>
                                                 <td>
                                                     <a href="#" class="btn
                                                         btn-warning btn-circle
                                                         btn-md"
                                                         data-toggle="modal"
-                                                        data-target="#EditarProduto" title="Editar Produto">
+                                                        data-target="#EditarDados"
+                                                        title="Editar">
                                                         <i class="fas fa-pen"></i>
                                                     </a>
                                                     <a href="#" class="btn
                                                         btn-danger btn-circle
-                                                        btn-md" title="Deletar Produto"> 
+                                                        btn-md" title="Deletar">
                                                         <i class="fas fa-trash"></i>
                                                     </a>
                                                 </td>
@@ -511,13 +499,13 @@
             <div class="modal fade" id="AddProduto" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-dialog modal-md" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-gradient-danger">
                             <h5 class="modal-title
                                 text-white font-weight-bold"> <i class="fas
-                                    fa-list"></i> Adicionar
-                                Produto</h5>
+                                    fa-list"></i> Dados
+                                Adicionais</h5>
                             <button class="close" type="button"
                                 data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
@@ -525,34 +513,11 @@
                         </div>
                         <div class="modal-body">
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label
-                                        class="form-label">Nome: </label>
-                                    <input type="number" class="form-control"
-                                        placeholder="Ex: Teste">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="form-label">Categoria:
-                                    </label>
-                                    <select class="custom-select"
-                                        aria-label="Default select example">
-                                        <option selected disabled>Categoria</option>
-                                        <option>Null</option>
-                                        <option>Null</option>
-                                        <option>Null</option>
-                                    </select>
-                                </div>
-
                                 <div class="form-group col-md-9">
-                                    <label for="">Imagem: </label>
-                                    <div class="custom-file">
-                                        <input type="file"
-                                            class="custom-file-input">
-                                        <label class="custom-file-label">
-                                            <i class="fas fa-upload"></i>
-                                            Escolher Arquivo
-                                        </label>
-                                    </div>
+                                    <label
+                                        class="form-label">Título: </label>
+                                    <input type="text" class="form-control"
+                                        placeholder="Ex: Teste">
                                 </div>
 
                                 <div class="form-group col-md-3">
@@ -565,18 +530,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="">Descrição:</label>
-                                <textarea class="form-control" rows="3"
-                                    maxlength="300"></textarea>
-                                <small class="font-weight-bold float-right">0/300</small>
-                            </div>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button"
                                 data-dismiss="modal">Cancelar</button>
                             <a class="btn btn-success" href="#"><i class="fas
-                                    fa-plus"></i> Adicionar o Produto</a>
+                                    fa-plus"></i> Adicionar</a>
                         </div>
                     </div>
                 </div>
@@ -585,17 +544,17 @@
 
 
             <!--Modal - Editar Produto -->
-            <div class="modal fade" id="EditarProduto" tabindex="-1"
+            <div class="modal fade" id="EditarDados" tabindex="-1"
                 role="dialog"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-dialog modal-md" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-gradient-danger">
                             <h5 class="modal-title
                                 text-white font-weight-bold"> <i class="fas
                                     fa-edit"></i> Editar
-                                Produto</h5>
+                                Dados</h5>
                             <button class="close" type="button"
                                 data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
@@ -603,34 +562,11 @@
                         </div>
                         <div class="modal-body">
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label
-                                        class="form-label">Nome: </label>
-                                    <input type="number" class="form-control"
-                                        placeholder="Ex: Teste">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="form-label">Categoria:
-                                    </label>
-                                    <select class="custom-select"
-                                        aria-label="Default select example">
-                                        <option selected disabled>Categoria</option>
-                                        <option>Null</option>
-                                        <option>Null</option>
-                                        <option>Null</option>
-                                    </select>
-                                </div>
-
                                 <div class="form-group col-md-9">
-                                    <label for="">Imagem: </label>
-                                    <div class="custom-file">
-                                        <input type="file"
-                                            class="custom-file-input">
-                                        <label class="custom-file-label">
-                                            <i class="fas fa-upload"></i>
-                                            Escolher Arquivo
-                                        </label>
-                                    </div>
+                                    <label
+                                        class="form-label">Título: </label>
+                                    <input type="text" class="form-control"
+                                        placeholder="Ex: Teste">
                                 </div>
 
                                 <div class="form-group col-md-3">
@@ -642,12 +578,6 @@
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Descrição:</label>
-                                <textarea class="form-control" rows="3"
-                                    maxlength="300"></textarea>
-                                <small class="font-weight-bold float-right">0/300</small>
                             </div>
                         </div>
                         <div class="modal-footer">

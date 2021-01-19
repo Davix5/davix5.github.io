@@ -390,12 +390,12 @@
                             <div class="d-sm-flex align-items-center
                                     justify-content-between">
                                 <h5 class="m-0 font-weight-bold
-                                        text-danger">Dados Adicionais</h5>
+                                        text-danger">Grupo Adicional</h5>
                                 <a href="#" class="d-none d-sm-inline-block
-                                        btn btn-sm btn-danger shadow-sm" data-toggle="modal"
-                                    data-target="#AddProduto"><i class="fas fa-plus fa-sm
+                                        btn btn-sm btn-danger shadow-sm" data-toggle="modal" data-target="#AddGrupo"><i
+                                        class="fas fa-plus fa-sm
                                             text-white-50"></i> Adicionar
-                                    Produto</a>
+                                </a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -405,7 +405,9 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Título</th>
-                                            <th>Preço</th>
+                                            <th>Limite</th>
+                                            <th>Posição</th>
+                                            <th>Obrigatório</th>
                                             <th>Ações</th>
                                         </tr>
                                     </thead>
@@ -413,11 +415,13 @@
                                         <tr>
                                             <td>1</td>
                                             <td>Teste</td>
-                                            <td>R$ 00,00</td>
+                                            <td>Teste</td>
+                                            <td>Teste</td>
+                                            <td>Teste</td>
                                             <td>
                                                 <a href="#" class="btn
                                                         btn-warning btn-circle
-                                                        btn-md" data-toggle="modal" data-target="#EditarDados"
+                                                        btn-md" data-toggle="modal" data-target="#EditarGrupo"
                                                     title="Editar">
                                                     <i class="fas fa-pen"></i>
                                                 </a>
@@ -461,15 +465,15 @@
         </a>
 
         <!--Modal - Adicionar Produto -->
-        <div class="modal fade" id="AddProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="AddGrupo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-danger">
                         <h5 class="modal-title
                                 text-white font-weight-bold"> <i class="fas
-                                    fa-list"></i> Dados
-                            Adicionais</h5>
+                                    fa-list"></i> Grupo
+                            Adicional</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
@@ -480,85 +484,93 @@
                                 <label class="form-label">Título: </label>
                                 <input type="text" class="form-control" placeholder="Ex: Teste">
                             </div>
-
                             <div class="form-group col-md-3">
-                                <label for="">Preço:</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">R$</span>
-                                    </div>
-                                    <input type="text" class="form-control">
-                                </div>
+                                <label class="form-label">Posição: </label>
+                                <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Limite: </label>
+                                <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Obrigatório:
+                                </label>
+                                <select class="custom-select" aria-label="Default select example">
+                                    <option selected disabled>Selecione</option>
+                                    <option>Sim</option>
+                                    <option>Não</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                         <a class="btn btn-success" href="#"><i class="fas
-                                    fa-plus"></i> Adicionar</a>
+                                        fa-plus"></i> Adicionar</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fim do Modal - Adicionar Produto -->
+    </div>
+    <!-- Fim do Modal - Adicionar Produto -->
 
 
-        <!--Modal - Editar Produto -->
-        <div class="modal fade" id="EditarDados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-md" role="document">
-                <div class="modal-content">
-                    <div class="modal-header bg-gradient-danger">
-                        <h5 class="modal-title
+    <!--Modal - Editar Produto -->
+    <div class="modal fade" id="EditarGrupo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-gradient-danger">
+                    <h5 class="modal-title
                                 text-white font-weight-bold"> <i class="fas
                                     fa-edit"></i> Editar
-                            Dados</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-row">
-                            <div class="form-group col-md-9">
-                                <label class="form-label">Título: </label>
-                                <input type="text" class="form-control" placeholder="Ex: Teste">
-                            </div>
+                        Dados</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <label class="form-label">Título: </label>
+                            <input type="text" class="form-control" placeholder="Ex: Teste">
+                        </div>
 
-                            <div class="form-group col-md-3">
-                                <label for="">Preço:</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">R$</span>
-                                    </div>
-                                    <input type="text" class="form-control">
+                        <div class="form-group col-md-3">
+                            <label for="">Preço:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">R$</span>
                                 </div>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                        <a class="btn btn-success font-weight-bold" href="#"><i class="fas fa-check"></i> Registrar
-                            Alterações</a>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-success font-weight-bold" href="#"><i class="fas fa-check"></i> Registrar
+                        Alterações</a>
                 </div>
             </div>
         </div>
-        <!-- Fim do Modal - Editar Produto -->
+    </div>
+    <!-- Fim do Modal - Editar Produto -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

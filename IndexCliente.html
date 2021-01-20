@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Delivery - Dashboard</title>
+    <title>Produtos</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -130,13 +130,6 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            <!-- Sidebar Message -->
-            <!-- <div class="sidebar-card">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div> -->
         </ul>
         <!-- End of Sidebar -->
 
@@ -371,7 +364,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#" data-toggle="modal">
                                     <i class="fas fa-sign-out-alt fa-sm
                                             fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -397,12 +390,12 @@
                             <div class="d-sm-flex align-items-center
                                     justify-content-between">
                                 <h5 class="m-0 font-weight-bold
-                                        text-danger"><i class="fas fa-tags"></i> Categoria</h5>
+                                        text-danger"><i class="fas fa-street-view"></i> Clientes</h5>
                                 <a href="#" class="d-none d-sm-inline-block
                                         btn btn-sm btn-danger shadow-sm" data-toggle="modal"
-                                    data-target="#AddCategoria"><i class="fas fa-plus fa-sm
+                                    data-target="#AddProduto"><i class="fas fa-plus fa-sm
                                             text-white-50"></i> Adicionar
-                                    Categoria</a>
+                                    Cliente</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -412,35 +405,35 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Nome</th>
-                                            <th>Posição</th>
+                                            <th>Número</th>
+                                            <th>Email</th>
                                             <th>Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
+
                                             <td>Teste</td>
                                             <td>Teste</td>
+                                            <td>Teste@teste.com</td>
                                             <td>
-
                                                 <a href="#" class="btn
-                                                        btn-warning
-                                                        btn-circle
-                                                        btn-md" data-toggle="modal" data-target="#EditCategoria" title="Editar
-                                                        Categoria">
-                                                    <i class="fas
-                                                            fa-pen"></i>
+                                                        btn-info btn-circle
+                                                        btn-md" title="Visualiza Endereço do Cliente">
+                                                    <i class="fas fa-map-signs"></i>
                                                 </a>
                                                 <a href="#" class="btn
-                                                        btn-danger
-                                                        btn-circle
-                                                        btn-md">
-                                                    <i class="fas
-                                                            fa-trash" title="Deletar
-                                                            Categoria"></i>
+                                                        btn-warning btn-circle
+                                                        btn-md" data-toggle="modal" data-target="#EditarProduto"
+                                                    title="Editar Dados do Cliente">
+                                                    <i class="fas fa-pen"></i>
                                                 </a>
-
-
+                                                <a href="#" class="btn
+                                                        btn-danger btn-circle
+                                                        btn-md" title="Deletar Cliente">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
                                             </td>
                                         </tr>
 
@@ -449,6 +442,7 @@
                             </div>
                         </div>
                     </div>
+
 
                 </div>
                 <!-- End of Main Content -->
@@ -474,75 +468,102 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
-        <!-- Modal - Adicionar Categoria-->
-        <div class="modal fade" id="AddCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <!--Modal - Adicionar Produto -->
+        <div class="modal fade" id="AddProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog modal-MD" role="document">
+            <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-danger">
                         <h5 class="modal-title
-                                text-white font-weight-bold" id="exampleModalLabel"><i class="fas
-                                    fa-tags"></i>
-                            Adicionar Categoria</h5>
+                                text-white font-weight-bold"> <i class="fas fa-street-view"></i> Adicionar
+                            Cliente</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
-
                         <div class="form-row">
-                            <div class="form-group col-md-10">
-                                <label for="exampleInputEmail1" class="form-label">Categoria:
-                                </label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Ex: Teste">
+                            <div class="form-group col-md-12">
+                                <label class="form-label">Nome: </label>
+                                <input type="text" class="form-control" placeholder="Ex: Teste">
                             </div>
-                            <div class="form-group col-md-2">
-                                <label for="exampleInputEmail1" class="form-label">Posição:
-                                </label>
-                                <input type="number" class="form-control" placeholder="0">
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Número: </label>
+                                <input type="text" class="form-control" placeholder="Ex: (00) 90000-0000">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Email: </label>
+                                <input type="text" class="form-control" placeholder="Ex: Teste@teste.com">
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                         <a class="btn btn-success" href="#"><i class="fas
-                                    fa-plus"></i> Adicionar Categoria</a>
+                                    fa-plus"></i> Adicionar Cliente</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fim do Modal - Adicionar Categoria-->
+        <!-- Fim do Modal - Adicionar Produto -->
 
 
-        <!-- Modal - Editar Categoria-->
-        <div class="modal fade" id="EditCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <!--Modal - Editar Produto -->
+        <div class="modal fade" id="EditarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog modal-MD" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-danger">
                         <h5 class="modal-title
-                                text-white font-weight-bold" id="exampleModalLabel"><i class="fas
-                                    fa-tags"></i>
-                            Editar Categoria</h5>
+                                text-white font-weight-bold"> <i class="fas
+                                    fa-edit"></i> Editar
+                            Produto</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
-
                         <div class="form-row">
-                            <div class="form-group col-md-10">
-                                <label for="exampleInputEmail1" class="form-label">Categoria:
-                                </label>
-                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Nome: </label>
+                                <input type="text" class="form-control" placeholder="Ex: Teste">
                             </div>
-                            <div class="form-group col-md-2">
-                                <label for="exampleInputEmail1" class="form-label">Posição:
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Categoria:
                                 </label>
-                                <input type="number" class="form-control">
+                                <select class="custom-select" aria-label="Default select example">
+                                    <option selected disabled>Categoria</option>
+                                    <option>Null</option>
+                                    <option>Null</option>
+                                    <option>Null</option>
+                                </select>
                             </div>
+
+                            <div class="form-group col-md-9">
+                                <label for="">Imagem: </label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input">
+                                    <label class="custom-file-label">
+                                        <i class="fas fa-upload"></i>
+                                        Escolher Arquivo
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="">Preço:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">R$</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Descrição:</label>
+                            <textarea class="form-control" rows="3" maxlength="300"></textarea>
+                            <small class="font-weight-bold float-right">0/300</small>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -553,7 +574,7 @@
                 </div>
             </div>
         </div>
-        <!-- Fim do Modal - Editar Categoria-->
+        <!-- Fim do Modal - Editar Produto -->
 
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>

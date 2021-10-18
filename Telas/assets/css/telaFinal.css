@@ -401,10 +401,6 @@ h6 {
 	color: rgba(22, 25, 26, 0.5);
 }
 
-.titleForms {
-	display: none;
-}
-
 #hero h2 {
 	font-family: Poppins;
 	font-style: normal;
@@ -419,23 +415,12 @@ h6 {
 	justify-content: center;
 }
 
-#hero .respPesquisa {
-	margin-left: 70px;
-	font-family: Poppins;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	line-height: 21px;
-
-	color: rgba(22, 25, 26, 0.5);
-
-}
-
 .card-body {
 	width: 100px;
 	height: 120px;
 
-	text-align: left !important;
+	text-align: center;
+	align-items: center;
 
 	background: #FFFFFF;
 	border: 1px solid #E5E5E5;
@@ -444,7 +429,6 @@ h6 {
 }
 
 .card-title {
-	text-align: center;
 	font-family: Poppins;
 	font-style: normal;
 	font-weight: normal;
@@ -463,14 +447,9 @@ h6 {
 
 }
 
-.emoji {
-	width: 20px;
-	height: 20px;
-}
-
 
 .protocolo {
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 #hero .ButtonsInst .btnVoltar02 {
@@ -652,22 +631,6 @@ h6 {
 }
 
 @media (max-width: 575px) {
-
-	#hero .hero-cards {
-		display: none;
-	}
-
-	.titleForms {
-		display: block;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 12px;
-		padding: 0 0 30px 0;
-		color: #0FA9EA;
-	}
-
 	#hero .hero-img img {
 		display: none;
 	}
@@ -681,7 +644,7 @@ h6 {
 	}
 
 	#hero .btn-get-started {
-		margin-top: 90px;
+
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 24px;
@@ -692,7 +655,19 @@ h6 {
 		text-align: center;
 	}
 
+	#hero .btn-get-started-tertiary {
+		margin-top: 90px;
+		font-size: 14px;
+		line-height: 21px;
 
+		color: #0FA9EA;
+
+		border: 1px solid #0FA9EA;
+		box-sizing: border-box;
+		border-radius: 2px;
+
+		padding: 9.42px 16px 7.42px 16px;
+	}
 
 	#hero .btn-get-started-secondary {
 		font-family: Poppins;
@@ -710,6 +685,8 @@ h6 {
 	}
 
 	#hero .btn-get-started-tertiary {
+
+		margin-top: 90px;
 		font-size: 14px;
 		line-height: 21px;
 
@@ -717,11 +694,10 @@ h6 {
 
 		border: 1px solid #0FA9EA;
 		box-sizing: border-box;
-		border-radius: 4px;
+		border-radius: 2px;
 
-		padding: 15px 34px 17px 34px;
+		padding: 9.42px 16px 7.42px 16px;
 	}
-
 }
 
 

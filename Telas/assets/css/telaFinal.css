@@ -734,6 +734,13 @@ section {
 	overflow: hidden;
 }
 
+@media (max-width:520px) {
+	section {
+		padding: 60px 0;
+		overflow: hidden;
+	}
+}
+
 .section-bg {
 	background-color: #f7fbfe;
 }

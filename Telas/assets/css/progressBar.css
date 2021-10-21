@@ -217,16 +217,16 @@
     right: auto;
 }
 
-#hero .progress-mobile {
+.progress-mobile {
     display: none;
 }
 
 @media (max-width: 768px) {
-    #hero .progress-desktop {
+    .progress-desktop {
         display: none;
     }
 
-    #hero .progress-mobile {
+    .progress-mobile {
         display: block;
     }
 }
